@@ -15,7 +15,6 @@
   mix-blend-mode: screen;
 }
 
-/* Анімації руху */
 @keyframes float1 {
   0% { transform: translate(0, 0); }
   50% { transform: translate(20px, -30px); }

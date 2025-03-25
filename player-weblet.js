@@ -10,33 +10,3 @@ playerContainer.innerHTML = `
     </audio>
   </div>
 `;
-
-// Підключаємо аудіо до лави, якщо активна
-const audio = document.getElementById('radio-stream');
-if (audio) {
-  const ctx = new AudioContext();
-  const src = ctx.createMediaElementSource(audio);
-  const analyser = ctx.createAnalyser();
-  src.connect(analyser);
-  analyser.connect(ctx.destination);
-
-  const bufferLength = analyser.frequencyBinCount;
-  const dataArray = new Uint8Array(bufferLength);
-
-  function animateLava() {
-    requestAnimationFrame(animateLava);
-    analyser.getByteFrequencyData(dataArray);
-    const average = dataArray.reduce((a, b) => a + b) / bufferLength;
-
-    // Змінюємо scale блобів на основі гучності
-    document.querySelectorAll('.lava-blob').forEach(blob => {
-      const scale = 1 + average / 300;
-      blob.style.transform = `scale(${scale})`;
-    });
-  }
-
-  audio.onplay = () => {
-    if (ctx.state === 'suspended') ctx.resume();
-    animateLava();
-  };
-}
