@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>coma.fm | макет</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <link href="lava.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .block {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      color: var(--color-text);
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      margin: 1rem auto;
+      width: min(90vw, 900px);
+    }
+    .horizontal {
+      display: flex;
+      gap: 1rem;
+    }
+    .horizontal .block {
+      flex: 1;
+      margin: 0;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+    .block ul {
+      margin: 0.5rem 0 0;
+      padding-left: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="lava-background"></div>
+  <div class="content-overlay">
+
+    <div class="horizontal" style="margin-top: 2rem;">
+      <div class="block">
+        <h2>🎧 Плеєр</h2>
+        <p>[ ▶️ ] [💚 Spotify]</p>
+        <img src="https://via.placeholder.com/64" alt="Обкладинка" style="border-radius:8px;">
+      </div>
+      <div class="block">
+        <h2>🪪 Паспорт треку</h2>
+        <p><strong>The Cramps — Human Fly</strong></p>
+        <p>Альбом: Songs The Lord Taught Us (1980)</p>
+        <p>Жанр: garage punk</p>
+        <p>Теги: garage, surf, raw</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <h2>🕓 Історія треків</h2>
+      <ul>
+        <li>The Cramps — Human Fly</li>
+        <li>Messer Chups — Magneto</li>
+        <li>The Ventures — Walk Don't Run</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h2>📅 Розклад програм</h2>
+      <ul>
+        <li>Пн: Garage Shadows — 22:00</li>
+        <li>Вт: Midnight Surf — 01:00</li>
+        <li>Ср: Echoes of the Jet Age — 20:00</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h2>📈 Хіт-парад</h2>
+      <ul>
+        <li>1. Link Wray — Rumble</li>
+        <li>2. Dick Dale — Misirlou</li>
+        <li>3. The Tornadoes — Bustin' Surfboards</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h2>❤️ Улюблені треки</h2>
+      <ul>
+        <li>The Cramps — Human Fly</li>
+        <li>The Tornadoes — Bustin' Surfboards</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script src="lava.js"></script>
+</body>
+</html>
