@@ -1,0 +1,38 @@
+.lava-background, .lava-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0; left: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.lava-blob {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+  mix-blend-mode: screen;
+}
+
+/* Анімації руху */
+@keyframes float1 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -30px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes float2 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-25px, 40px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes float3 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(15px, 25px); }
+  100% { transform: translate(0, 0); }
+}
+@keyframes float4 {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(-10px, -20px); }
+  100% { transform: translate(0, 0); }
+}
