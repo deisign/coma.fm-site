@@ -1,37 +1,73 @@
 
-.lava-background, .lava-container {
+.lava-background {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  top: 0; left: 0;
-  z-index: 0;
+  top: 0;
+  left: 0;
   overflow: hidden;
+  z-index: 0;
   pointer-events: none;
 }
+
 .lava-blob {
   position: absolute;
   border-radius: 50%;
-  mix-blend-mode: screen;
-  filter: blur(50px);
   opacity: 0.4;
+  filter: blur(60px);
+  mix-blend-mode: screen;
 }
+
+.blob1 {
+  width: 60vmax;
+  height: 60vmax;
+  background: #ff4500;
+  animation: float1 25s ease-in-out infinite;
+}
+.blob2 {
+  width: 50vmax;
+  height: 50vmax;
+  background: #4682b4;
+  animation: float2 30s ease-in-out infinite;
+}
+.blob3 {
+  width: 40vmax;
+  height: 40vmax;
+  background: #32cd32;
+  animation: float3 35s ease-in-out infinite;
+}
+.blob4 {
+  width: 45vmax;
+  height: 45vmax;
+  background: #9370db;
+  animation: float4 28s ease-in-out infinite;
+}
+
 @keyframes float1 {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(20px, -30px); }
-  100% { transform: translate(0, 0); }
+  0% { transform: translate(10vw, 10vh) scale(1); }
+  25% { transform: translate(60vw, 30vh) scale(1.1); }
+  50% { transform: translate(50vw, 60vh) scale(0.9); }
+  75% { transform: translate(20vw, 40vh) scale(1.05); }
+  100% { transform: translate(10vw, 10vh) scale(1); }
 }
 @keyframes float2 {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(-25px, 40px); }
-  100% { transform: translate(0, 0); }
+  0% { transform: translate(50vw, 60vh) scale(1); }
+  25% { transform: translate(20vw, 40vh) scale(1.05); }
+  50% { transform: translate(10vw, 10vh) scale(1); }
+  75% { transform: translate(60vw, 30vh) scale(1.1); }
+  100% { transform: translate(50vw, 60vh) scale(1); }
 }
 @keyframes float3 {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(15px, 25px); }
-  100% { transform: translate(0, 0); }
+  0% { transform: translate(20vw, 50vh) scale(1); }
+  25% { transform: translate(40vw, 10vh) scale(1.1); }
+  50% { transform: translate(70vw, 50vh) scale(0.95); }
+  75% { transform: translate(30vw, 30vh) scale(1.05); }
+  100% { transform: translate(20vw, 50vh) scale(1); }
 }
 @keyframes float4 {
-  0% { transform: translate(0, 0); }
-  50% { transform: translate(-10px, -20px); }
-  100% { transform: translate(0, 0); }
+  0% { transform: translate(70vw, 20vh) scale(1); }
+  25% { transform: translate(10vw, 60vh) scale(0.9); }
+  50% { transform: translate(40vw, 40vh) scale(1.05); }
+  75% { transform: translate(30vw, 10vh) scale(0.95); }
+  100% { transform: translate(70vw, 20vh) scale(1); }
 }
