@@ -1,0 +1,27 @@
+:root {
+  --font-main: 'Space Grotesk', sans-serif;
+  --color-bg: #333333;
+  --color-text: #f5f5dc;
+  --color-accent: #d94f00;
+  --color-secondary: #008080;
+  --color-soft: rgba(245, 245, 220, 0.1);
+
+  --lava-1: #d94f00;
+  --lava-2: #4caba7;
+  --lava-3: #cc7a8b;
+  --lava-4: #87a330;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+  overflow: hidden;
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
